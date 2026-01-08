@@ -116,16 +116,6 @@ To enable auto-deployment, you need to set up the following secrets in your GitH
 
 The workflow will trigger automatically on pushes to the main/master branch or can be manually triggered via the Actions tab.
 
-## Development
-
-### Testing Node.js
-
-A test script is included to verify Node.js installation:
-
-```sh
-docker run --rm athrvk/calibre-node-base node index.js
-```
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
