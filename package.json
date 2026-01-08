@@ -1,0 +1,18 @@
+{
+  "name": "calibre-node-base",
+  "version": "1.0.0",
+  "description": "Base Docker image with Calibre and Node.js pre-installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "calibre",
+    "nodejs",
+    "docker",
+    "ebook-converter"
+  ],
+  "author": "",
+  "license": "MIT"
+}
