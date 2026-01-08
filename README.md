@@ -1,6 +1,6 @@
 # Calibre and Node.js Base Image
 
-[![Docker Image Version](https://img.shields.io/docker/v/athrvk/calibre-node-base)](https://hub.docker.com/repository/docker/athrvk/calibre-node-base/general)
+[![Docker Image Version](https://img.shields.io/docker/v/athrvk/calibre-node-base?sort=semver)](https://hub.docker.com/repository/docker/athrvk/calibre-node-base)
 
 This repository contains a Dockerfile for creating a base image with Calibre and Node.js pre-installed. This image is built on top of Ubuntu 24.04 and includes all necessary dependencies for running Calibre for e-book management and conversion.
 
