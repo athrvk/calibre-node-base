@@ -25,6 +25,7 @@ RUN apt-get update && apt-get -qq install -y \
     libegl1 \
     libopengl0 \
     libxcb-cursor0 \
+    libxkbcommon0 \
     # Additional utilities
     poppler-utils \
     speech-dispatcher \
@@ -35,7 +36,7 @@ RUN apt-get update && apt-get -qq install -y \
 # Install Node.js
 RUN wget -qO- https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g npm@latest
+    && npm install -g npm@11
 
 # Install Calibre via the official installer, which always pulls the latest
 # upstream release (Ubuntu's apt package lags behind and is discouraged by
