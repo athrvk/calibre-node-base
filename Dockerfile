@@ -34,9 +34,9 @@ RUN apt-get update && apt-get -qq install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js
-RUN wget -qO- https://deb.nodesource.com/setup_20.x | bash - \
+RUN wget -qO- https://deb.nodesource.com/setup_24.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g npm@11
+    && npm install -g npm@latest
 
 # Install Calibre via the official installer, which always pulls the latest
 # upstream release (Ubuntu's apt package lags behind and is discouraged by
