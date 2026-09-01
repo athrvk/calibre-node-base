@@ -9,7 +9,7 @@ This repository contains a Dockerfile for creating a base image with Calibre and
 - **Ubuntu 24.04**: The base image is built on the latest LTS version of Ubuntu.
 - **Multi-Architecture Support**: Built for both `linux/amd64` and `linux/arm64` platforms.
 - **Calibre**: Pre-installed for e-book management and conversion.
-- **Node.js 20**: Latest LTS version from NodeSource.
+- **Node.js 24**: Latest LTS version from NodeSource.
 
 ## Multi-Architecture Support
 
@@ -76,8 +76,8 @@ FROM athrvk/calibre-node-base:latest
 The Dockerfile installs the following packages and dependencies:
 
 - **System utilities**: `wget`, `curl`, `xz-utils`, `gnupg`
-- **Calibre**: E-book management and conversion tool (from Ubuntu repository)
-- **Node.js 20**: Latest LTS version from NodeSource
+- **Calibre**: E-book management and conversion tool (from calibre's official installer, tracking upstream releases)
+- **Node.js 24**: Latest LTS version from NodeSource
 - **npm**: Latest version of npm package manager
 
 ## Verifying Installations

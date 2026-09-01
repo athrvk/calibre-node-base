@@ -15,11 +15,17 @@ RUN apt-get update && apt-get -qq install -y \
     curl \
     xz-utils \
     gnupg \
+    xdg-utils \
+    python3 \
     # Calibre dependencies
     libglx0 \
     libgl1 \
     libglx-mesa0 \
     libgl1-mesa-dri \
+    libegl1 \
+    libopengl0 \
+    libxcb-cursor0 \
+    libxkbcommon0 \
     # Additional utilities
     poppler-utils \
     speech-dispatcher \
@@ -28,14 +34,14 @@ RUN apt-get update && apt-get -qq install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js
-RUN wget -qO- https://deb.nodesource.com/setup_20.x | bash - \
+RUN wget -qO- https://deb.nodesource.com/setup_24.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# Install Calibre
-RUN apt-get update \
-    && apt-get -qq install -y calibre \
-    && rm -rf /var/lib/apt/lists/* \
+# Install Calibre via the official installer, which always pulls the latest
+# upstream release (Ubuntu's apt package lags behind and is discouraged by
+# the Calibre project)
+RUN wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin \
     && dbus-uuidgen > /etc/machine-id
 
 
